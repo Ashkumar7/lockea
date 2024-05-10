@@ -1,13 +1,8 @@
-const PORT = 3000;
 const express = require('express');
 const app = express();
 
-app.get('/', (req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.send('70339233');
-});
+app.get('/', (req, res) => res.send('Express on Vercel'));
 
-app.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}/`);
-});
+app.listen(3000, () => console.log('Server ready on port 3000.'));
+
+module.exports = app;
